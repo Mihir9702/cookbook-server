@@ -14,8 +14,7 @@ export const database = () => {
 }
 
 export const server = (app: any) => {
-  const PORT = process.env.PORT || 6000
-  app.listen(PORT, () =>
-    console.log(`Connected to server http://localhost:${PORT}`)
+  app.listen(6000, () =>
+    console.log(`Connected to server http://localhost:${6000}`)
   )
 }
