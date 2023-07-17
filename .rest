@@ -1,0 +1,62 @@
+GET http://localhost:5002/api
+
+
+### Dynamic User
+
+GET http://localhost:5002/api/user/DynamicUser1
+
+### Login
+
+### eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjI4Y2VjOWE0MWYxYWVkNWZjMzRhOTAiLCJuYW1lIjoibmV3bmFtZSIsInVzZXJuYW1lIjoibmV3dXNlciIsImlhdCI6MTY0Njg0MTU1MSwiZXhwIjoxNjQ2ODYzMTUxfQ.Tyclk1Ki6a0lsO4nX_cF5Al9MAPLQeHszQsg0nresvE
+
+### Auth
+
+GET http://localhost:5002/api/user/jwt
+
+### Signup
+
+POST http://localhost:5002/api/user/signup
+Content-Type: application/json
+
+{
+  "name": "auth",
+  "username": "authesds",
+  "password": "authpass"
+}
+
+
+### All Categories
+
+GET http://localhost:5002/api/test
+
+### Individual Category
+
+GET http://localhost:5002/api/categories/Chicken
+
+### Individual Recipe
+
+GET http://localhost:5002/api/recipes/Piri-piri%20chicken%20and%20slaw
+
+### Cookbook
+
+POST http://localhost:5002/api/cookbook
+Content-Type: application/json
+
+{
+
+  "owner": "62213d372cf340850e1c99b2",
+  "recipes": [
+    "621fc3d8d3ba309c7f6956cf", "621fc3d9d3ba309c7f695707",
+    "621fc3d9d3ba309c7f695745", "621fc3d9d3ba309c7f695747",
+    "621fc3dad3ba309c7f695765", "621fc3dad3ba309c7f695769"
+  ]
+}
+
+###
+
+POST http://localhost:5002/api/newname/update
+Content-Type: application/json
+
+{
+  "username": "mynewusername",
+}
