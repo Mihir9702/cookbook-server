@@ -1,6 +1,6 @@
 import { Express, Request, Response, ErrorRequestHandler } from 'express'
 
-const error = (app: Express) => {
+export default (app: Express) => {
   app.use((_, res: Response) => {
     res.status(404).json({ errorMessage: 'This route does not exist' })
   })
@@ -15,5 +15,3 @@ const error = (app: Express) => {
     }
   })
 }
-
-export default error

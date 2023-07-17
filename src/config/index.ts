@@ -1,19 +1,10 @@
-// Main framework of Nodejs to create api
-import express, { Express } from 'express'
-
-// Environment variables
 import 'dotenv/config'
-
+import express, { Express } from 'express'
+import cors from 'cors'
 import logger from 'morgan'
-
 import cookieParser from 'cookie-parser'
 
-// Cross Origin Resource Sharing | Only allow server to accept form requests from the same domain
-import cors from 'cors'
-
-// * Middleware configuration
-// ! Error CORS
-const app = (app: Express) => {
+export default (app: Express) => {
   app.set('trust proxy', 1)
 
   app.use(express.json())
@@ -29,5 +20,3 @@ const app = (app: Express) => {
   app.use(logger('dev'))
   app.use(cookieParser())
 }
-
-export default app
