@@ -2,12 +2,7 @@
   "name": "my-cookbook-server",
   "version": "1.0.0",
   "scripts": {
-    "build-ts": "tsc",
-    "postinstall": "npm run start",
-    "start": "npm run serve",
-    "serve": "node dist/src/server.js",
-    "watch-node": "nodemon dist/src/server.js",
-    "watch-ts": "tsc -w"
+    "start": "nodemon --exec ts-node src/server.ts"
   },
   "dependencies": {
     "axios": "^0.26.0",
@@ -25,10 +20,7 @@
     "mongoose": "^6.2.3",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
-    "serve": "^13.0.2",
-    "ts-node": "^10.7.0",
-    "tsconfig-paths": "^3.12.0",
-    "typescript": "^4.5.5"
+    "serve": "^13.0.2"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
@@ -44,7 +36,10 @@
     "@types/node": "^17.0.21",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
-    "eslint": "^8.10.0"
+    "eslint": "^8.10.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^5.1.6"
   },
   "engines": {
     "node": "16.13.2",
